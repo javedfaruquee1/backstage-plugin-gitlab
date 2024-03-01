@@ -11,12 +11,12 @@ import React from 'react';
 import type { TagSchema } from '@gitbeaker/rest';
 
 export const TagCommit = (
-    issueObject: TagSchema
+    issueObject: CommitSchema
 ): TableColumn<Record<string, unknown>> => {
     return (
         <Typography variant="body2" noWrap>
             <Box ml={1} component="span">
-                <Link href={issueObject.commit} target="_blank">
+                <Link href={issueObject.commit.short_id} target="_blank">
                     {issueObject.commit.short_id}
                 </Link>
             </Box>
