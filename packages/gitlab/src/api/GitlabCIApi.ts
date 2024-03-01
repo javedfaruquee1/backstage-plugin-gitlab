@@ -8,6 +8,7 @@ import type {
     ReleaseSchema,
     RepositoryContributorSchema,
     UserSchema,
+    TagSchema,
 } from '@gitbeaker/rest';
 
 export type ContributorsSummary = (RepositoryContributorSchema &
@@ -56,6 +57,9 @@ export type GitlabCIApi = {
         count: number
     ): Promise<MergeRequestSchema[] | undefined>;
     getProjectName(projectID: string | number): Promise<string | undefined>;
+    getTags(
+        projectID?: string | number
+    ): Promise<TagSchema[] | undefined>;
     getLanguagesSummary(
         projectID: string | number
     ): Promise<LanguagesSummary | undefined>;
