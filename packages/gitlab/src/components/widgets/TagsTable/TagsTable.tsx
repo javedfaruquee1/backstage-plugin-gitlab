@@ -33,7 +33,7 @@ export const DenseTable = ({
     
     const data = issuesObjects.map((issue) => ({
         ...issue,
-        created_at: getElapsedTime(issue.created_at),
+        created_at: getElapsedTime(issue.authored_date),
     }));
     
     return (
