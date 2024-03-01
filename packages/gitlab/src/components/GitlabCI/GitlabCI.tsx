@@ -11,6 +11,7 @@ import {
     ReleasesCard,
     ReleasesCardProps,
     CoverageCard,
+    TagsTable,
 } from '../widgets';
 
 export type GitlabPageProps = {
@@ -41,6 +42,9 @@ export const GitlabCI = (props: GitlabPageProps) => (
                 </Grid>
                 <Grid item md={12}>
                     <IssuesTable />
+                </Grid>
+                <Grid item md={12}>
+                    <TagsTable />
                 </Grid>
                 <Grid item md={12}>
                     <CoverageCard />
