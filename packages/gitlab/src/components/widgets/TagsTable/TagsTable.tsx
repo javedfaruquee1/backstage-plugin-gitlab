@@ -30,7 +30,12 @@ export const DenseTable = ({
     ];
 
     const title = 'Gitlab Issues: ' + projectName;
-
+    
+    const data = issuesObjects.map((issue) => ({
+        ...issue,
+        created_at: getElapsedTime(issue.created_at),
+    }));
+    
     return (
         <Table
             title={title}
